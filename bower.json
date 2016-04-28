@@ -1,16 +1,16 @@
 {
-  "name": "strophe.js",
+  "name": "cloud-strophe.js",
   "description": "Strophe.js is an XMPP library for JavaScript",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "license": "MIT",
   "main": "strophe.js",
   "authors": [
     "Jack Moffitt"
   ],
-  "homepage": "http://strophe.im/strophejs",
+  "homepage": "https://github.com/dobromin/strophejs",
   "repository": {
     "type": "git",
-    "url": "git://github.com/strophe/strophejs.git"
+    "url": "git://github.com/dobromin/strophejs.git"
   },
   "keywords": [
     "xmpp",
