@@ -5387,7 +5387,9 @@ Strophe.Websocket.prototype = {
             var closeString = Strophe.serialize(close);
             this._conn.rawOutput(closeString);
             try {
-                this.socket.send(closeString);
+                if (this.socket) {
+                  this.socket.send(closeString);
+                }      
             } catch (e) {
                 Strophe.info("Couldn't send <close /> tag.");
             }
@@ -5513,7 +5515,9 @@ Strophe.Websocket.prototype = {
                     rawStanza = Strophe.serialize(stanza);
                     this._conn.xmlOutput(stanza);
                     this._conn.rawOutput(rawStanza);
-                    this.socket.send(rawStanza);
+                    if (this.socket) {
+                      this.socket.send(rawStanza);
+                    }
                 }
             }
             this._conn._data = [];
@@ -5584,7 +5588,9 @@ Strophe.Websocket.prototype = {
 
         var startString = Strophe.serialize(start);
         this._conn.rawOutput(startString);
-        this.socket.send(startString);
+        if (this.socket) {
+          this.socket.send(startString);
+        }
     },
 
     /** PrivateFunction: _reqToData
